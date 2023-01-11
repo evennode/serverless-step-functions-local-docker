@@ -104,15 +104,17 @@ class ServerlessStepFunctionsLocal {
   }
 
   async getStepFunctionsFromConfigurationInput() {
-
     this.stateMachines = this.stateMachineCFARNResolver(this.serverless.configurationInput.stepFunctions.stateMachines);
 
     if (this.serverless.configurationInput.custom
       && this.serverless.configurationInput.custom.stepFunctionsLocal
-      && this.serverless.configurationInput.custom.stepFunctionsLocal.TaskResourceMapping) {
-        this.replaceTaskResourceMappings(this.serverless.configurationInput.stepFunctions.stateMachines, this.serverless.configurationInput.custom.stepFunctionsLocal.TaskResourceMapping);
+      && this.serverless.configurationInput.custom.stepFunctionsLocal.TaskResourceMapping
+    ) {
+        this.replaceTaskResourceMappings(
+          this.serverless.configurationInput.stepFunctions.stateMachines,
+          this.serverless.configurationInput.custom.stepFunctionsLocal.TaskResourceMapping
+        );
     }
-
   }
 
   /**

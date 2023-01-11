@@ -1,5 +1,8 @@
 # serverless-step-functions-local-docker
-Run AWS step functions offline with Serverless!
+
+[![NPM Version][npm-version-image]][npm-url]
+
+Run AWS step functions offline with Serverless.
 
 This is a plugin for the [Serverless Framework](https://serverless.com/). It uses [stepfunctions-localhost](https://www.npmjs.com/package/stepfunctions-localhost) to emulate step functions with AWS' provided tool for local development. Alternatively you can run your own emulator such as [aws-stepfunctions-local](https://hub.docker.com/r/amazon/aws-stepfunctions-local) docker container.
 
@@ -114,3 +117,6 @@ $ docker run \
     -e "LAMBDA_ENDPOINT=http://localhost:3002" \
     amazon/aws-stepfunctions-local
 ```
+
+[npm-url]: https://npmjs.org/package/serverless-step-functions-local-docker
+[npm-version-image]: https://badgen.net/npm/v/serverless-step-functions-local-docker
